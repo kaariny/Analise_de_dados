@@ -41,13 +41,13 @@ Este é um projeto de análise de dados desenvolvido utilizando **Python**, **Fl
 Abra o navegador e acesse http://127.0.0.1:5000 para interagir com a aplicação.
 
 
-## Estrutura do Projeto
-Analise_de_dados/
-│
-├── app.py              # Arquivo principal da aplicação Flask
-├── requirements.txt    # Dependências do projeto
-├── static/             # Arquivos estáticos (imagens, CSS, JS)
-├── templates/          # Arquivos HTML do front-end
-├── data/               # Arquivos de dados e análise
-├── README.md           # Documentação do projeto
-└── .gitignore          # Arquivo para ignorar arquivos não desejados no Git
+## Estrutura do Projeto<br>
+Analise_de_dados/<br>
+│<br>
+├── app.py              # Arquivo principal da aplicação Flask<br>
+├── requirements.txt    # Dependências do projeto<br>
+├── static/             # Arquivos estáticos (imagens, CSS, JS)<br>
+├── templates/          # Arquivos HTML do front-end<br>
+├── data/               # Arquivos de dados e análise<br>
+├── README.md           # Documentação do projeto<br>
+└── .gitignore          # Arquivo para ignorar arquivos não desejados no Git<br>
