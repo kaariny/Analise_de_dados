@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Análise Interativa</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Análise de Dados Qualitativos e Numéricos</h1>
+    <form id="form-analise">
+        <label for="col_num">Selecione a variável numérica:</label>
+        <select id="col_num" name="col_num">
+            <option value="População">População</option>
+            <option value="PIB Per Capta (em dollar)">PIB Per Capta</option>
+            <option value="IDH">IDH</option>
+        </select>
+        
+        <label for="col_cat">Selecione a variável qualitativa:</label>
+        <select id="col_cat" name="col_cat">
+            <option value="Continente">Continente</option>
+            <option value="Religião Predominante">Religião Predominante</option>
+            <option value="Regime Governamental">Regime Governamental</option>
+        </select>
+        
+        <button type="submit">Analisar</button>
+    </form>
+
+    <div id="graph"></div>
+
+    <script>
+        $('#form-analise').submit(function(event) {
+            event.preventDefault();
+            $.post('/analise', $(this).serialize(), function(data) {
+                $('#graph').html(data.graph_html);
+            });
+        });
+    </script>
+</body>
+</html>
